@@ -7,7 +7,6 @@ export const collections: {
 } = {};
 
 export function buildMongoDbUri(host: string, username: string, password: string, options?: string) {
-
   username = encodeURIComponent(username)
   password = encodeURIComponent(password)
   const db = "dev-test"
@@ -15,7 +14,6 @@ export function buildMongoDbUri(host: string, username: string, password: string
 }
 
 export async function connectToDatabase(uri:string) {
-
   const client = new MongoClient(uri, {
     serverApi: {
       version: ServerApiVersion.v1,
